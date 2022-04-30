@@ -3,7 +3,7 @@
 @section('title', 'Paises')
 
 @section('content_header')
-    <h1>Lista de Paises</h1>
+    <h1>Gestión de paises</h1>
 @stop
 
 @section('content')

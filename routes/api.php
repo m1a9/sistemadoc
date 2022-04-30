@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\DepartamentoController;
 use App\Http\Controllers\ProvinciaController;
-
+use App\Http\Controllers\AreaController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,3 +24,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/paises/{id}/departamentos',[DepartamentoController::class,'byidpaises']);
 
 Route::get('/departamentos/{id}/provincias',[ProvinciaController::class,'byiddepa']);
+
+Route::get('/locales/{id}/areas',[AreaController::class,'getarea']);

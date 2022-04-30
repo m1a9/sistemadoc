@@ -13,6 +13,8 @@ use App\Http\Controllers\DepartamentoController;
 use App\Http\Controllers\ProvinciaController;
 use App\Http\Controllers\DistritoController;
 
+use App\Http\Controllers\LocalController;
+use App\Http\Controllers\AreaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,3 +60,10 @@ Route::resource('tiposol',TiposolicitanteController::class);
 
 Route::get('/tipousuario',[TipousuarioController::class,'index1']);
 Route::resource('tipousu',TipousuarioController::class);
+
+Route::get('/locales',[LocalController::class,'index1']);
+Route::resource('local',LocalController::class);
+
+Route::get('/areas',[AreaController::class,'index1']);
+Route::resource('area',AreaController::class);
+

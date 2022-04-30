@@ -23,6 +23,7 @@
 		created:function () {
    			this.getPaises(this.thispage);
          alertify.success('Success message');
+         toastr.success('Success message');
 		},
 computed:{
    isActived: function(){
