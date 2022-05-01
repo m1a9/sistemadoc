@@ -82,15 +82,16 @@
                     if (String(response.data.result) == '1') {
                         this.getProvincia(this.thispage);
                         if (response.data.exi == '0') {
-                            alert(response.data.msj);
+                            alertify.error(response.data.msj);
+                            console.log('repetido');
                         } else {
                             this.cerrarFormNuevo();
-                            alert(response.data.msj);
+                            alertify.success(response.data.msj);
                         }
                     } else {
                         $('#' + response.data.selector).focus();
                         $('#' + response.data.selector).css("border", "1px solid red");
-                        alert(response.data.msj);
+                        alertify.error(response.data.msj);
                     }
                 }).catch(error => {})
             },
