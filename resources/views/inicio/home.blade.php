@@ -90,7 +90,7 @@
   <div class="col-lg-3 col-xs-6">
     <div class="small-box bg-green">
       <div class="inner">
-        <h3 style="font-size: 25px;">Doc Identidad</h3>
+        <h3 style="font-size: 25px;">DocU Identidad</h3>
         <p>Gestión de Doc identidad</p>
       </div>
       <div class="icon" style="    top: 5px;">
