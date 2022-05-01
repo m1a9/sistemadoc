@@ -22,7 +22,7 @@
 		},
 		created:function () {
    			this.getPaises(this.thispage);
-         alertify.success('Success message');
+        //  alertify.success('Success message');
 		},
 computed:{
    isActived: function(){
@@ -33,13 +33,13 @@ computed:{
            return [];
        }
 
-       var from=this.pagination.current_page - this.offset 
-       var from2=this.pagination.current_page - this.offset 
+       var from=this.pagination.current_page - this.offset
+       var from2=this.pagination.current_page - this.offset
        if(from<1){
            from=1;
        }
 
-       var to= from2 + (this.offset*2); 
+       var to= from2 + (this.offset*2);
        if(to>=this.pagination.last_page){
            to=this.pagination.last_page;
        }
@@ -64,17 +64,23 @@ computed:{
               if(String(response.data.result)=='1'){
                this.getPaises(this.thispage);
                 if (response.data.exi=='0') {
-                  alert(response.data.msj);
+                  //alert(response.data.msj);
+                  alertify.error(response.data.msj);
+
                 }else{
                   this.cerrarFormNuevo();
-                  alert(response.data.msj); 
-                } 
+                  // alert(response.data.msj);
+                 alertify.success(response.data.msj);
+                }
               }else{
                 $('#'+response.data.selector).focus();
                 $('#'+response.data.selector).css( "border", "1px solid red");
-                  alert(response.data.msj);
+                  // alert(response.data.msj);
+                 alertify.warning(response.data.msj);
+
+
               }
-          }).catch(error=>{  
+          }).catch(error=>{
           })
    			},
    			getPaises: function (page) {
@@ -147,23 +153,23 @@ computed:{
                   }
                 });
             }
-          }).catch(swal.noop);  
+          }).catch(swal.noop);
    },
-        updatepaises:function () {     
+        updatepaises:function () {
           var url="pais/"+this.idpais;
           var data = new  FormData();
           data.append('newPais', this.newPais);
           data.append('tipo','editar');
           data.append('_method', 'PUT');
           axios.post(url, data).then(response=>{
-              if(response.data.result=='1'){   
+              if(response.data.result=='1'){
                 this.getPaises(this.thispage);
                 if (response.data.exi=='0') {
                   alert(response.data.msj);
                 }else{
                   this.cerrarFormeditar();
-                  alert(response.data.msj); 
-                } 
+                  alert(response.data.msj);
+                }
               }else{
                 $('#'+response.data.selector).focus();
                 $('#'+response.data.selector).css( "border", "1px solid red");

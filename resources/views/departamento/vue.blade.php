@@ -71,15 +71,15 @@ computed:{
               if(String(response.data.result)=='1'){
                this.getDepartamento(this.thispage);
                 if (response.data.exi=='0') {
-                  alert(response.data.msj);
+                  alertify.error(response.data.msj);
                 }else{
                   this.cerrarFormNuevo();
-                  alert(response.data.msj); 
+                  alertify.success(response.data.msj);
                 } 
               }else{
                 $('#'+response.data.selector).focus();
                 $('#'+response.data.selector).css( "border", "1px solid red");
-                  alert(response.data.msj);
+                alertify.warning(response.data.msj);
               }
           }).catch(error=>{  
           })
@@ -133,7 +133,7 @@ computed:{
           $('#txtdepa').focus();
           this.iddepa=depa.id;
           this.newDepa=depa.name;
-          this.newPais=depa.idpa;
+          // this.newPais=depa.idpa;
           this.cbopaise=depa.idpa;
           
           
