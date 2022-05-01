@@ -11,9 +11,10 @@ class CargoController extends Controller{
 		return view('cargo.index');
 	}
 	public function index(Request $request){
-        $buscar=$request->busca;
+        
+            $buscar=$request->busca;
         $cargos=Cargo::where('name','like','%'.$buscar.'%')->where('borrado',0)->orderBy('name')->paginate(30);
-    	return [
+        return [
             'pagination'=>[
                 'total'=> $cargos->total(),
                 'current_page'=> $cargos->currentPage(),
@@ -23,7 +24,8 @@ class CargoController extends Controller{
                 'to'=> $cargos->lastItem(),
             ],
             'cargos'=>$cargos
-        ];	
+        ];
+
     }
     public function store(Request $request){
         $nom=$request->cate;

@@ -15,6 +15,8 @@ use App\Http\Controllers\DistritoController;
 
 use App\Http\Controllers\LocalController;
 use App\Http\Controllers\AreaController;
+
+use App\Http\Controllers\ArchivoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,3 +69,5 @@ Route::resource('local',LocalController::class);
 Route::get('/areas',[AreaController::class,'index1']);
 Route::resource('area',AreaController::class);
 
+Route::get('/archivos',[ArchivoController::class,'index1']);
+Route::resource('archivo',ArchivoController::class);
