@@ -24,6 +24,7 @@ use App\Http\Controllers\LocalController;
 use App\Http\Controllers\AreaController;
 
 use App\Http\Controllers\ArchivoController;
+use App\Http\Controllers\DocumentoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -82,13 +83,16 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/archivos',[ArchivoController::class,'index1']);
     Route::resource('archivo',ArchivoController::class);
 
+    
+    Route::get('/regdocumento',[DocumentoController::class,'index1']);
+    Route::resource('documento',DocumentoController::class);
 
 });
 Route::get('/login',[SessionController::class,'create'])->name('login.index');
 Route::post('/login',[SessionController::class,'store'])->name('login.store');
 Route::get('/logout',[SessionController::class,'destroy'])->name('login.destroy');
 
-Route::get('/perfil',[PerfilController::class,'index1']);
+//Route::get('/perfil',[PerfilController::class,'index1']);
 Route::resource('perfils',PerfilController::class);
 Route::put('/perfilss/{id}',[PerfilController::class,'store'])->name('perfilss.store');
 

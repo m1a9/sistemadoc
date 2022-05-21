@@ -45,8 +45,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>Mesa de partes</b>',
+    'logo_img' => 'vendor/adminlte/dist/img/csi.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -226,150 +226,89 @@ return [
 
     'menu' => [
         // Navbar items:
-        [
+        /*[
             'type'         => 'navbar-search',
             'text'         => 'search',
             'topnav_right' => true,
         ],
         [
-            'type'         => 'fullscreen-widget',
+            'type'         => 'navbar-menu',
             'topnav_right' => true,
-        ],
+        ],*/
 
         // Sidebar items:
+        ['header' => 'USUARIO'],
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        /*['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Ver perfil',
+            'url'  => 'perfils',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Empresa',
+            'icon'    => 'fas fa-building',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Registrar un local',
+                    'url'  => 'locales',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Registrar área',
+                    'url'  => 'areas',
                 ],
             ],
         ],
-        ['header' => 'labels'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text'    => 'Tabla base',
+            'icon'    => 'fas fa-table',
+            'submenu' => [
+                [
+                    'text'       => 'Paises',
+                    'url'        => 'paises',
+                ],
+                [
+                    'text'       => 'Departamentos',
+                    'url'        => 'departamentos',
+                ],
+                [
+                    'text'       => 'Provincias',
+                    'url'        => 'provincias',
+                ],
+            ],
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],*/
-
-
-        ['header' => 'Avance'],
-        [
-            'text'       => 'Tipo usuario',
-            'icon_color' => 'red',
-            'url'        => 'tipousuario',
-        ],
-        [
-            'text'       => 'Cargos',
-            'icon_color' => 'red',
-            'url'        => 'cargos',
-        ],
-        [
-            'text'       => 'Documento de identidad',
-            'icon_color' => 'red',
-            'url'        => 'documentoidentidad',
-        ],
-        [
-            'text'       => 'Tipo de documento',
-            'icon_color' => 'red',
-            'url'        => 'tipodocumento',
-        ],
-        [
-            'text'       => 'Tipo solicitante',
-            'icon_color' => 'red',
-            'url'        => 'tiposolicitante',
-        ],
-        [
-            'text'       => 'Categorias',
-            'icon_color' => 'red',
-            'url'        => 'categorias',
-        ],
-        [
-            'text'       => 'Paises',
-            'icon_color' => 'red',
-            'url'        => 'paises',
-        ],
-        [
-            'text'       => 'Departamentos',
-            'icon_color' => 'red',
-            'url'        => 'departamentos',
-        ],
-        [
-            'text'       => 'Provincias',
-            'icon_color' => 'red',
-            'url'        => 'provincias',
-        ],
-        [
-            'text'       => 'Distritos',
-            'icon_color' => 'red',
-            'url'        => 'distritos',
+            'text'    => 'Mantenimiento',
+            'icon'    => 'fa fa-laptop',
+            'submenu' => [
+                [
+                    'text'       => 'Tipo usuario',
+                    'url'        => 'tipousuario',
+                ],
+                [
+                    'text'       => 'Cargos',
+                    'url'        => 'cargos',
+                ],
+                [
+                    'text'       => 'Documento de identidad',
+                    'url'        => 'documentoidentidad',
+                ],
+                [
+                    'text'       => 'Tipo de documento',
+                    'url'        => 'tipodocumento',
+                ],
+                [
+                    'text'       => 'Tipo solicitante',
+                    'url'        => 'tiposolicitante',
+                ],
+                [
+                    'text'       => 'Categorias',
+                    'url'        => 'categorias',
+                ],
+        
+                [
+                    'text'       => 'Distritos',
+                    'url'        => 'distritos',
+                ],
+            ],
         ],
     ],
 
