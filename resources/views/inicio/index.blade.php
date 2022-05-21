@@ -13,7 +13,7 @@
 	<ul class="nav">
 			<div class="col-lg-4">
 		<li class="nav-item">
-		<a type="button" class="btn btn-success" aria-current="page" href="{{route('home.index')}}">{{auth()->user()->correo}}</a>
+		<a type="button" class="btn btn-success" aria-current="page" href="{{route('perfils.index')}}">{{auth()->user()->correo}}</a>
 	 	 </li>
 		</div>
 			<div class="col-lg-8">

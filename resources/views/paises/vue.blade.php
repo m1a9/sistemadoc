@@ -22,12 +22,8 @@
 		},
 		created:function () {
    			this.getPaises(this.thispage);
-<<<<<<< HEAD
-         alertify.success('Success message');
-         toastr.success('Success message');
-=======
         //  alertify.success('Success message');
->>>>>>> 6ab2617f1035bc72729e56649c46c810682a3b93
+         toastr.success('Success message');
 		},
 computed:{
    isActived: function(){

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Login</title>
     <script src="{{ asset('js/app.js') }}"></script>
     <link rel="stylesheet" href="css/login.css">
 </head>
@@ -26,7 +26,17 @@
                 *Error
               </p>
               @enderror
-                  <p class='field'>
+              <p class='field'>
+                <label for='tpuser'>Tipo de Usuario</label>
+                <select name="tipousuarios_id" id="tipousuarios_id">
+                  <option value="">Seleccione</option>
+                  @foreach ($tipoUser as $tpuser)
+                  <option value={{$tpuser->id}}>{{$tpuser->name}}</option>
+                  @endforeach
+                </select>
+                <span id='valida' class='i i-warning'></span>
+              </p>
+              <p class='field'>
                 <label for='user'>CORREO</label>
                 <input type='text' autocomplete="off" id='correo' name='correo' title='Username' />
                 <span id='valida' class='i i-warning'></span>
@@ -41,7 +51,7 @@
                   <input type='checkbox' value='TRUE' title='Keep me Signed in' /> Keep me Signed in
                 </label> --}}
       
-                  <input type='submit' id='do_login' value='INICIAR SESIÓN' title='Get Started' />
+                  <input type='submit' id='do_login' value='INICIAR SESIÓN' />
             </div>
           </div>
           </form> 
